@@ -65,3 +65,8 @@ You're definitely going to want to upgrade when the next version is released.
 
 This plugin is not created or (yet) endorsed by Wistia. It was just made by a client for in-house use and thought I'd share.
 If you experience any problems, feel free to fork it, fix it, or scrap it. You can also open a GitHub issue and I'll take a look.
+
+== Props ==
+* Uses [https://github.com/stephenreid/wistia-api](wistia-api) for API connections.
+* See [http://wistia.com/doc/data-api](Wistia Data API Docs) for implementation.
+* Built with [https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate](WordPress Plugin Boilerplate).
