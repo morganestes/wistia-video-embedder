@@ -153,7 +153,9 @@ class WistiaVideoEmbedder {
 	 * @return    null    Return early if no settings page is registered.
 	 */
 	public function enqueue_admin_styles() {
-		$which_page         = $_GET['page'];
+		$which_page = '';
+		if ( isset( $_GET['page'] ) && ! empty( $_GET['page'] ) )
+			$which_page = $_GET['page'];
 		$is_our_admin_pages = strpos( $which_page, $this->plugin_slug );
 
 		if ( 'true' == $is_our_admin_pages ) {
@@ -168,7 +170,9 @@ class WistiaVideoEmbedder {
 	 * @return    null    Return early if no settings page is registered.
 	 */
 	public function enqueue_admin_scripts() {
-		$which_page         = $_GET['page'];
+		$which_page = '';
+		if ( isset( $_GET['page'] ) && ! empty( $_GET['page'] ) )
+			$which_page = $_GET['page'];
 		$is_our_admin_pages = strpos( $which_page, $this->plugin_slug );
 
 		if ( 'true' == $is_our_admin_pages ) {
@@ -410,7 +414,7 @@ class WistiaVideoEmbedder {
 				$table
 			) );
 
-		update_option( 'wistia_projects_update', $last_db_update) );
+		update_option( 'wistia_projects_update', $last_db_update );
 	}
 
 	public static function display_projects_list() {
@@ -446,8 +450,8 @@ HTML;
 
 			date_default_timezone_set( 'America/Chicago' );
 
-			$last_check     = date( 'Y-m-d H:i:s' );
-			$updated = get_option( 'wistia_projects_update' );
+			$last_check = date( 'Y-m-d H:i:s' );
+			$updated    = get_option( 'wistia_projects_update' );
 			$is_expired = false;
 
 			if ( $is_expired ) {
