@@ -48,8 +48,6 @@ Right now, it's used to connect to your Wistia account to get project lists.
 == Screenshots ==
 
 1. Generic shot. Still working on getting these done.
-2.
-
 
 == Changelog ==
 
